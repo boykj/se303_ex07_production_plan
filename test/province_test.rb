@@ -42,7 +42,9 @@ class ProvinceTest < Minitest::Test
     end
 
     it "tests the negative demand" do
-      
+      asia.demand = -1;
+      assert_equal(-26, asia.shortfall)
+      assert_equal(-10, asia.profit)
     end
 
     it "tests the string function" do
