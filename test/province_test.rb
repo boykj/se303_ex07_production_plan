@@ -12,13 +12,6 @@ class ProvinceTest < Minitest::Test
 
     before(:each) {
       asia = Province.new(sample_province_data)
-      #DATA = {
-      #  name: "No producers",
-      #  producers: [],
-      #  demand: 30,
-      #  price: 20
-      #}
-      #noProducers = Province.new(DATA)
     }
 
     it "tests the province shortfall" do
