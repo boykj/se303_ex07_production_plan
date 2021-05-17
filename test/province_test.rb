@@ -11,11 +11,6 @@ class ProvinceTest < Minitest::Test
     assert_equal(5, asia.shortfall)
   end
 
-  def test_province_profit
-    asia = Province.new(sample_province_data)
-    assert_equal(230, asia.profit)
-  end
-
   describe "basic_tests" do
 
     let(asia = Province.new(sample_province_data))
