@@ -10,6 +10,17 @@ class ProvinceTest < Minitest::Test
 
     let(asia = Province.new(sample_province_data))
 
+    before(:each) {
+      asia = Province.new(sample_province_data)
+    }
+    #let data = {
+    #  name: "No producers",
+    #  producers: [],
+    #  demand: 30,
+    #  price: 20
+    #}
+    #noProducers = Province.new(data)
+
     it "tests the province shortfall" do
       assert_equal(5, asia.shortfall)
     end
