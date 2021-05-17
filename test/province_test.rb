@@ -12,15 +12,14 @@ class ProvinceTest < Minitest::Test
 
     before(:each) {
       asia = Province.new(sample_province_data)
+      #DATA = {
+      #  name: "No producers",
+      #  producers: [],
+      #  demand: 30,
+      #  price: 20
+      #}
+      #noProducers = Province.new(DATA)
     }
-
-    #let data = {
-    #  name: "No producers",
-    #  producers: [],
-    #  demand: 30,
-    #  price: 20
-    #}
-    #noProducers = Province.new(data)
 
     it "tests the province shortfall" do
       assert_equal(5, asia.shortfall)
@@ -30,16 +29,20 @@ class ProvinceTest < Minitest::Test
       assert_equal(230, asia.profit)
     end
 
+    it "tests the productions changes" do
+      asia.producers[0].production = 20;
+      assert_equal(-6, asia.shortfall)
+      assert_equal(292, asia.profit)
+    end
+
     it "tests the zero demand" do
       asia.demand = 0;
       assert_equal(-25, asia.shortfall)
       assert_equal(0, asia.profit)
     end
 
-    it "tests the productions changes" do
-      asia.producers[0].production = 20;
-      assert_equal(-6, asia.shortfall)
-      assert_equal(292, asia.profit)
+    it "tests the negative demand" do
+      
     end
 
     it "tests the string function" do
