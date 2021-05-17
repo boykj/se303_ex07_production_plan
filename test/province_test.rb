@@ -13,6 +13,7 @@ class ProvinceTest < Minitest::Test
     before(:each) {
       asia = Province.new(sample_province_data)
     }
+
     #let data = {
     #  name: "No producers",
     #  producers: [],
@@ -33,6 +34,10 @@ class ProvinceTest < Minitest::Test
       asia.demand = 0;
       assert_equal(-25, asia.shortfall)
       assert_equal(0, asia.profit)
+    end
+
+    it "tests the productions changes" do
+      
     end
 
     it "tests the string function" do
