@@ -48,8 +48,9 @@ class ProvinceTest < Minitest::Test
     end
 
     it "tests the string function" do
-      #asia.demand = ''
-      #assert_equal '', asia.demand
+      asia.demand = ""
+      assert_equal true, asia.demand.is_a?(String)
+      #assert_equal false, asia.shortfall.is_a?(Integer)
     end
 
   end
