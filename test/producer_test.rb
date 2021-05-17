@@ -25,6 +25,10 @@ class ProducerTest < Minitest::Test
 			assert_equal(30, noProducers.shortfall)
 		end
 
+		it "tests the producer profit" do
+			assert_equal(0, noProducers.profit)
+		end
+
 	end
 
 end
