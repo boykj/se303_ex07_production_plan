@@ -39,6 +39,7 @@ class ProvinceTest < Minitest::Test
     it "tests the productions changes" do
       asia.producers[0].production = 20;
       assert_equal(-6, asia.shortfall)
+      assert_equal(292, asia.profit)
     end
 
     it "tests the string function" do
